@@ -11,8 +11,8 @@ RegisterCommand('testything', function(source)
 	print(xPlayer.getMoney())
 end)
 
-RegisterServerEvent("rh-cokepackage:get")
-AddEventHandler("rh-cokepackage:get", function()
+RegisterServerEvent("cokepackage:get")
+AddEventHandler("cokepackage:get", function()
     local _source = source	
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	Citizen.Wait(5)
@@ -53,17 +53,17 @@ ESX.RegisterServerCallback('coke:test2', function (source, cb)
 end)
 
 ESX.RegisterUsableItem('cokepackage', function(source)
-	TriggerClientEvent('rh-items:cokepackage', source)
+	TriggerClientEvent('items:cokepackage', source)
 end)
 
 ESX.RegisterUsableItem('cocainebag', function(source)
 	local _source = source
 	local xPlayer  = ESX.GetPlayerFromId(_source)
-	TriggerClientEvent('rh-items:cokebag', source)
+	TriggerClientEvent('items:cokebag', source)
 	xPlayer.removeInventoryItem("cocainebag", 1)
 end)
-RegisterServerEvent("rh-cocaine:givePure")
-AddEventHandler("rh-cocaine:givePure", function()
+RegisterServerEvent("cocaine:givePure")
+AddEventHandler("cocaine:givePure", function()
     local _source = source	
 	local xPlayer = ESX.GetPlayerFromId(_source)
 	Citizen.Wait(5)

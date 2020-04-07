@@ -39,7 +39,7 @@ Citizen.CreateThread(function()
 				thang = output
 
 				if (thang == true) then
-					TriggerServerEvent("rh-cokepackage:get")
+					TriggerServerEvent("cokepackage:get")
 				else
 					TriggerEvent('notification', "You don't have enough money.", 2)
 				end
@@ -82,8 +82,8 @@ Citizen.CreateThread(function()
 end)
 
 
-RegisterNetEvent('rh-items:cokepackage')
-AddEventHandler('rh-items:cokepackage', function()
+RegisterNetEvent('items:cokepackage')
+AddEventHandler('items:cokepackage', function()
 	exports['mythic_progbar']:Progress({
 			name = "cokepackage",
 			duration = 20000,
@@ -98,12 +98,12 @@ AddEventHandler('rh-items:cokepackage', function()
 				disableCombat = true,
 			},
 	}, function(status)
-		TriggerServerEvent('rh-cocaine:givePure')
+		TriggerServerEvent('cocaine:givePure')
 	end)
 end)
 
-RegisterNetEvent('rh-items:cokebag')
-AddEventHandler('rh-items:cokebag', function()
+RegisterNetEvent('items:cokebag')
+AddEventHandler('items:cokebag', function()
 	exports['mythic_progbar']:Progress({
 			name = "cokebag",
 			duration = 7000,
